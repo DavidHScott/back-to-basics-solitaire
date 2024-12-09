@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://53jdwncjjeok"]
+
+[ext_resource type="PackedScene" uid="uid://blccbtjlg4gp4" path="res://scenes/components/card.tscn" id="1_b150q"]
+[ext_resource type="PackedScene" uid="uid://cqmpyue2kljco" path="res://scenes/components/deck.tscn" id="2_5hfw6"]
+[ext_resource type="Texture2D" uid="uid://3tq0osstqmva" path="res://CardOutline.png" id="3_fkbnx"]
+[ext_resource type="Script" path="res://src/CardStack.gd" id="3_sct5f"]
+
+[node name="Gameplay" type="Node2D"]
+position = Vector2(400, 300)
+
+[node name="Deck" parent="." instance=ExtResource("2_5hfw6")]
+position = Vector2(-300, -217)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Piles" type="Node2D" parent="."]
+position = Vector2(-300, -54)
+
+[node name="CardStack" type="Node2D" parent="Piles"]
+script = ExtResource("3_sct5f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Piles/CardStack"]
+texture = ExtResource("3_fkbnx")
+
+[node name="CardLocation2" type="Node2D" parent="Piles"]
+position = Vector2(100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piles/CardLocation2"]
+texture = ExtResource("3_fkbnx")
+
+[node name="CardLocation3" type="Node2D" parent="Piles"]
+position = Vector2(200, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piles/CardLocation3"]
+texture = ExtResource("3_fkbnx")
+
+[node name="CardLocation4" type="Node2D" parent="Piles"]
+position = Vector2(300, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piles/CardLocation4"]
+texture = ExtResource("3_fkbnx")
+
+[node name="CardLocation5" type="Node2D" parent="Piles"]
+position = Vector2(400, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piles/CardLocation5"]
+texture = ExtResource("3_fkbnx")
+
+[node name="CardLocation6" type="Node2D" parent="Piles"]
+position = Vector2(500, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piles/CardLocation6"]
+texture = ExtResource("3_fkbnx")
+
+[node name="CardLocation7" type="Node2D" parent="Piles"]
+position = Vector2(600, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piles/CardLocation7"]
+texture = ExtResource("3_fkbnx")
+
+[node name="Foundations" type="Node2D" parent="."]
+
+[node name="Cards" type="Node2D" parent="."]
+
+[node name="Card" parent="." node_paths=PackedStringArray("placed_at") instance=ExtResource("1_b150q")]
+position = Vector2(-233, 110)
+placed_at = NodePath("../Piles/CardStack")

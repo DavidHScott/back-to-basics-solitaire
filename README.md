@@ -1,0 +1,1 @@
+Born from nostaliga from the old Windows Solitaire client, this is a simple and free Solitaire client without adds, or any of the other obtrusive bells and whistles that they tend to be shipped with.

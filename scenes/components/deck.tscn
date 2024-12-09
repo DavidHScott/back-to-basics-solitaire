@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqmpyue2kljco"]
+
+[ext_resource type="Script" path="res://src/Deck.gd" id="1_3egt6"]
+[ext_resource type="Texture2D" uid="uid://3tq0osstqmva" path="res://CardOutline.png" id="2_r0sjb"]
+
+[node name="Deck" type="Node2D"]
+script = ExtResource("1_3egt6")
+
+[node name="Stock" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Stock"]
+texture = ExtResource("2_r0sjb")
+
+[node name="Waste" type="Node2D" parent="."]
+position = Vector2(100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Waste"]
+texture = ExtResource("2_r0sjb")
